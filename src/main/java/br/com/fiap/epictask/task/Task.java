@@ -22,7 +22,7 @@ public class Task {
     @NotBlank
     String title;
 
-    @Size(min = 10)
+    @Size(min = 10, message = "{task.description.size}")
     String description;
 
     @Positive

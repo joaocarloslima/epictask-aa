@@ -26,7 +26,7 @@
         <h3>Cadastrar Tarefa</h3>
 
         <div class="card-panel">
-            <form action="/task" method="post" th:object="${task}">
+            <form th:action="${'/task'}" method="post" th:object="${task}">
                 <div class="input-field col s12">
                     <input type="text" th:field="*{title}" class="validate">
                     <label for="title">Título</label>
