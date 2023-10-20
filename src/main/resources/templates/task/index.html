@@ -27,7 +27,7 @@
         <h2>Tarefas Pendentes</h2>
 
         <div class="row">
-            <div class="col s12 m6" th:each="task : ${tasks}" >
+            <div class="col s12 m6" th:each="task : ${tasks}">
                 <div class="card">
                     <div class="card-content">
                         <div class="progress">
@@ -47,6 +47,12 @@
         </div>
 
     </main>
+
+    <div class="fixed-action-btn">
+        <a href="/task/new" class="btn-floating btn-large red">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
 
 
 </body>
