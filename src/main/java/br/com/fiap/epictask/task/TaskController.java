@@ -42,7 +42,9 @@ public class TaskController {
     }
 
     @GetMapping("new")
-    public String form(Task task){
+    public String form(Task task, Model model, @AuthenticationPrincipal OAuth2User user){
+         model.addAttribute("avatar_url", user.getAttribute("avatar_url"));
+        model.addAttribute("username", user.getAttribute("name"));
         return "task/form";
     }
 
