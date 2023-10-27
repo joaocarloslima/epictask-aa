@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head th:replace="~{_template :: head('erro')}"></head>
+<body>
+
+    <main class="container center">
+        <h4>Ops, um erro aconteceu</h4>
+        <p th:text="${message}"></p>
+        <a href="/task" class="btn">voltar para home</a>
+    </main>
+    
+</body>
+</html>

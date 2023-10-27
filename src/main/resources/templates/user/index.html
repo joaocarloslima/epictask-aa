@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{_template :: head('usuários')}"></head>
+
+<body class="grey lighten-2">
+    <nav th:replace="~{_template :: #navbar}"></nav>
+
+    <main class="container">
+        <div class="card-panel green" th:if="${success}" th:text="${success}"></div>
+
+        <h2>Usuários</h2>
+
+        <ul class="collection">
+            <li class="collection-item" th:each="user : ${users}">
+                <img th:src="${user.avatarUrl}" alt="" class="avatar">
+                <span th:text="${user.name}"></span>
+                <span th:text="${user.score}" class="secondary-content"></span>
+
+            </li>
+        </ul>
+
+    </main>
+
+</body>
+
+</html>
